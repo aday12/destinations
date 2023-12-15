@@ -9,4 +9,17 @@ userInput.addEventListener("submit", (e) => {
     const destName = document.getElementById("destination_name");
     const photoUrl = photo_url.value || IMG_PLACEHOLDER;
 
+    user_input_form.reset();
+
+    const card = createCard({desc, location, destName, photoUrl});
+    
+
 })
+
+function createCard({desc, location, destName, photoUrl}) {
+    const card = document.createElement("div");
+    card.setAttribute("style", "width: 18rem");
+    card.innerHTML = `
+    <img src = "${photoUrl}">;
+    `
+}
